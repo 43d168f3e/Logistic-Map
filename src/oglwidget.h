@@ -57,19 +57,14 @@ protected:
     //widget's OpenGL rendering context is made current when paintGL(), resizeGL(), or initializeGL() is called.
     void mouseDoubleClickEvent(QMouseEvent *event)  override { event->accept();}
     // NEVER CALLED:void closeEvent(QCloseEvent *event) override;
-<<<<<<< HEAD
-    virtual void mousePressEvent(QMouseEvent *event) override;
-    virtual void mouseReleaseEvent(QMouseEvent *event) override;
-    virtual void mouseMoveEvent(QMouseEvent *event) override;
+
+    void mousePressEvent(QMouseEvent *event) override;
+    void mouseReleaseEvent(QMouseEvent *event) override;
+    void mouseMoveEvent(QMouseEvent *event) override;
 //    void keyPressEvent(QKeyEvent *event) override;
-    virtual void enterEvent(QEvent *event) override;
-    virtual void leaveEvent(QEvent *event) override;
-=======
-//  void mousePressEvent(QMouseEvent *event) override;
-//  void mouseReleaseEvent(QMouseEvent *event) override;
-//  void mouseMoveEvent(QMouseEvent *event) override;
-//    void keyPressEvent(QKeyEvent *event) override;
->>>>>>> a05e49d729fc6aaee688a84d33145411faae9dda
+    void enterEvent(QEvent *event) override;
+    void leaveEvent(QEvent *event) override;
+    
     QPoint ScreenToModel( QPoint const &pos) const;
     void set_ptr_LM(LMap *_ptr_LM) {
         m_ptr_LMap = _ptr_LM;
